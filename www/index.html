@@ -9,10 +9,24 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+        var valor01, valor02, resultado
+        fuunction somar () {
+        valor01 = parseInt( document.getElementById('valor01').value)
+        valor02 = parseInt( document.getElementById('valor02').value)
+
+        resultado= valor01+valor02
+
+        document.getElementById('resultado').innerHTML= resultado
+        }
     </script>
 </head>
 <body>
+    <h1>Calculadora</h1>
 	<br />
     This is a template for Monaca app.
+    <input type="text" placeholder="Insira o primeiro valor" id="valor01">
+       <input type="text" placeholder="Insira o segundo valor" id="valor02">
+          <input type="button" value="SOMAR" id="btnSomar" onclick= "somar()">
+          <h1 id="resultado"></h1>
 </body>
 </html>
